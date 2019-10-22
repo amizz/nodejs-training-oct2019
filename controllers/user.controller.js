@@ -12,7 +12,7 @@ async function createUser(req, res) {
         }).save()
         return success(res, newUser)
     } catch (exception) {
-        return error(res, 400, 'Bad Request')
+        return error(400, 'Bad Request')
     }
 }
 
@@ -22,6 +22,7 @@ async function getAllUsers(req, res) {
 
         return success(res, users)
     } catch (error) {
+        console.log(error)
         res.status(400).json({})
     }
 }

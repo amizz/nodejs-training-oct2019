@@ -7,8 +7,6 @@ const {
     updateUser
 } = require('../controllers/user.controller')
 
-// const UserCtrl = require('../controllers/user.controller')
-
 function userRouter(params) {
     router.post('/', createUser)
     router.get('/', getAllUsers)
